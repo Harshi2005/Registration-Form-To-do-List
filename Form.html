@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hackathon Registration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e2afcf, #f9f7dc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      font-size: 2rem;
+      color: #333;
+      margin: 2rem 0;
+    }
+
+    .form-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .gender-box {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .gender-box input[type="radio"] {
+      margin-right: 0.3rem;
+    }
+
+    .confirm-box {
+      margin-top: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #111827;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+<header>Hackathon Registration</header>
+
+<div class="form-box">
+  <form id="registrationForm">
+    <label>Full Name:</label>
+    <input type="text" id="name" required>
+
+    <label>Email:</label>
+    <input type="email" id="email" required>
+
+    <label>Phone Number:</label>
+    <input type="text" id="phone" required pattern="\d{10}" title="Enter 10-digit phone number">
+
+    <label>Gender:</label>
+    <div class="gender-box">
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+    </div>
+
+    <label>State:</label>
+    <input type="text" id="state" required>
+
+    <label>Education:</label>
+    <select id="education" required>
+      <option value="">Select</option>
+      <option value="UG 1st Year">UG 1st Year</option>
+      <option value="UG 2nd Year">UG 2nd Year</option>
+      <option value="UG 3rd Year">UG 3rd Year</option>
+      <option value="UG 4th Year">UG 4th Year</option>
+    </select>
+
+    <label>Department:</label>
+    <input type="text" id="department" required>
+
+    <label>No. of Team Members:</label>
+    <input type="number" id="team" required min="1">
+
+    <label>What is your idea?</label>
+    <textarea id="idea" rows="4" required></textarea>
+
+    <div class="confirm-box">
+      <input type="checkbox" id="confirm" required>
+      <label for="confirm">I confirm the information is correct.</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Registration submitted!');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
