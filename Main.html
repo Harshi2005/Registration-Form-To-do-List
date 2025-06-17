@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hackathon Main Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #d9a7c7, #fffcdc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    header {
+      font-size: 2.5rem;
+      margin: 1.5rem 0;
+      color: #333;
+      text-align: center;
+    }
+
+    .main-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: auto;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #111827;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    form label, form input, form select, form textarea {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    form input, form select, form textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .gender-box {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .confirm-box {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .todo-controls {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .todo-controls input {
+      flex: 1;
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .todo-controls button {
+      padding: 0.6rem 1rem;
+      background: #111827;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: not-allowed;
+    }
+
+    .todo-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .todo-list li {
+      padding: 0.5rem;
+      background: #f3f4f6;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Hackathon Preview Page</header>
+
+  <div class="main-container">
+
+    <!-- Registration Form Frame -->
+    <div class="box">
+      <h2>Registration Form</h2>
+      <form>
+        <label>Full Name:</label>
+        <input type="text" disabled>
+
+        <label>Email:</label>
+        <input type="email" disabled>
+
+        <label>Phone Number:</label>
+        <input type="text" disabled>
+
+        <label>Gender:</label>
+        <div class="gender-box">
+          <label><input type="radio" disabled> Male</label>
+          <label><input type="radio" disabled> Female</label>
+        </div>
+
+        <label>State:</label>
+        <input type="text" disabled>
+
+        <label>Education:</label>
+        <select disabled>
+          <option>Select</option>
+        </select>
+
+        <label>Department:</label>
+        <input type="text" disabled>
+
+        <label>No. of Team Members:</label>
+        <input type="number" disabled>
+
+        <label>What is your idea?</label>
+        <textarea rows="3" disabled></textarea>
+
+        <div class="confirm-box">
+          <input type="checkbox" disabled>
+          <label>I confirm the information is correct.</label>
+        </div>
+
+        <button type="submit" disabled>Submit</button>
+      </form>
+    </div>
+
+    <!-- To-Do List Frame -->
+    <div class="box">
+      <h2>To-Do List</h2>
+      <div class="todo-controls">
+        <input type="text" placeholder="Add a new task" disabled>
+        <button disabled>Add</button>
+      </div>
+      <ul class="todo-list">
+        <li>Sample Task 1</li>
+        <li>Sample Task 2</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
